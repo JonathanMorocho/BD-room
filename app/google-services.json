@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "903676062951",
+    "project_id": "listcontact-9970b",
+    "storage_bucket": "listcontact-9970b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903676062951:android:98b5efed0e722a058b8642",
+        "android_client_info": {
+          "package_name": "com.example.listcontactos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "903676062951-bhbpkmgaldefrbfidhte6itcp9detr6l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkNpLoYy3VWq6QJbn6ZgqBK7aihv8PHSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "903676062951-bhbpkmgaldefrbfidhte6itcp9detr6l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:903676062951:android:93995965cbf84b838b8642",
+        "android_client_info": {
+          "package_name": "com.istl.ListContact"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "903676062951-bhbpkmgaldefrbfidhte6itcp9detr6l.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAkNpLoYy3VWq6QJbn6ZgqBK7aihv8PHSk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "903676062951-bhbpkmgaldefrbfidhte6itcp9detr6l.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
