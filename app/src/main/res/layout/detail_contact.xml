@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:paddingLeft="10dp"
@@ -96,7 +98,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
-                android:text="Telefono"
+                android:text="@string/telefono"
                 android:textSize="16dp"
                 android:textStyle="bold" />
 
@@ -111,15 +113,15 @@
                 android:id="@+id/detailContactNumber"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:textSize="16dp" />
+                android:layout_marginStart="4dp"
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="@string/activity_detail_contact_city"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <View
@@ -133,15 +135,15 @@
                 android:id="@+id/detailContactCity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:textSize="16dp" />
+                android:layout_marginStart="4dp"
+                android:textSize="16sp" />
 
             <TextView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:text="@string/activity_detail_contact_description"
-                android:textSize="16dp"
+                android:textSize="16sp"
                 android:textStyle="bold" />
 
             <View
@@ -155,15 +157,15 @@
                 android:id="@+id/detailContactDescription"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="4dp"
-                android:textSize="16dp" />
+                android:layout_marginStart="4dp"
+                android:onClick="onClick"
+                android:textSize="16sp" />
 
-            <Button
-                android:id="@+id/eliminar"
+            <ImageButton
+                android:id="@+id/btneliminar"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:onClick="onClick"
-                android:text="ELIMINAR" />
+                app:srcCompat="@drawable/ic_baseline_delete_24" />
 
         </LinearLayout>
 

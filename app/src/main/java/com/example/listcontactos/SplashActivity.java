@@ -8,20 +8,19 @@ import android.os.Handler;
 
 public class SplashActivity extends AppCompatActivity {
 
-    private final int duracion=2000;
-
+    int duracion=2300;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-        
+
         new Handler().postDelayed(new Runnable() {
             @Override
             public void run() {
-                Intent intent = new Intent(SplashActivity.this, MainActivity.class);
+                Intent intent= new Intent(SplashActivity.this, MainActivity.class);
                 startActivity(intent);
                 finish();
             }
-        },duracion);
+        }, duracion);
     }
 }

@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -11,16 +12,16 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.bumptech.glide.Glide;
-import com.example.listcontactos.database.ContactLab;
 import com.example.listcontactos.database.Contacto;
+import com.example.listcontactos.database.ContactLab;
 
-public class DetailContact extends AppCompatActivity implements View.OnClickListener {
+public class DetailContact extends AppCompatActivity  implements View.OnClickListener{
 
     private TextView Nombre, Telefono,Ciudad, Descripcion;
     private ImageView imagen;
-    private Button btnEliminar;
+    private ImageButton btnEliminar;
     private ContactLab contactLab;
-    Contacto contact;
+    Contacto contacto;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,6 +36,9 @@ public class DetailContact extends AppCompatActivity implements View.OnClickList
         String foto = getIntent().getStringExtra("Foto");
         String correo = getIntent().getStringExtra("Correo");
 
+        Bundle bundle = getIntent().getExtras();
+        contacto = (Contacto) bundle.getSerializable("Contacto");
+
         //ubicacion = findViewById(R.id.deta)
         imagen = findViewById(R.id.detailContactImage);
         Nombre = findViewById(R.id.detailContactName);
@@ -42,9 +46,18 @@ public class DetailContact extends AppCompatActivity implements View.OnClickList
         Descripcion = findViewById(R.id.detailContactDescription);
         Telefono = findViewById(R.id.detailContactNumber);
         Descripcion = findViewById(R.id.detailContactDescription);
-        btnEliminar = findViewById(R.id.eliminar);
 
+
+
+
+        btnEliminar = findViewById(R.id.btneliminar);
+
+        //le envio el contexto al ContactLab
+        contactLab = new ContactLab(this);
+
+        //le doy la accion el boton
         btnEliminar.setOnClickListener(this);
+
 
         Nombre.setText(nombre +" "+ apellidos+"\n");
         Telefono.setText(telefono);
@@ -59,11 +72,12 @@ public class DetailContact extends AppCompatActivity implements View.OnClickList
     @Override
     public void onClick(View v) {
         if (btnEliminar == btnEliminar){
-            contactLab.eliminar(contact);
-            Toast.makeText(this, "Eliminar", Toast.LENGTH_SHORT).show();
+            contactLab.delete(contacto);
+            Toast.makeText(this, "Eliminado", Toast.LENGTH_SHORT).show();
             finish();
+        }else{
+            Toast.makeText(this, "NO se puedo eliminar", Toast.LENGTH_SHORT).show() ;
+
         }
-
     }
-
 }

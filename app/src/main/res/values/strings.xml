@@ -2,5 +2,6 @@
     <string name="app_name">ListContactos</string>
     <string name="activity_detail_contact_city">Direccion</string>
     <string name="activity_detail_contact_description">Descripcion</string>
+    <string name="telefono">Telefono</string>
 
 </resources>

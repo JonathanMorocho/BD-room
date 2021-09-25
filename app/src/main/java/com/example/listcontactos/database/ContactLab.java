@@ -40,14 +40,9 @@ public class ContactLab     {
         mContactoDAO.addContacto(c);
     }
 
-    public void deletePersona(Contacto c) {
+    public void delete(Contacto c){
         mContactoDAO.deleteContacto(c);
-    }
-    public void deleteAllPersona() {
-        mContactoDAO.deleteAllContacto();
     }
 
-    public void eliminar(Contacto c){
-        mContactoDAO.deleteContacto(c);
-    }
+
 }

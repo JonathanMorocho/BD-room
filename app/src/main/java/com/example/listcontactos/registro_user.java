@@ -2,6 +2,7 @@ package com.example.listcontactos;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -20,7 +21,8 @@ public class registro_user extends AppCompatActivity implements View.OnClickList
     TextView txtDireccion;
     TextView txtDescripcion;
     TextView txtTelefono;
-    Button btnGuardar;
+    TextView txtFoto;
+    Button btnGuardar, btnCancelar;
     DatabaseReference database;
 
 
@@ -36,8 +38,12 @@ public class registro_user extends AppCompatActivity implements View.OnClickList
         txtApellido = findViewById(R.id.apellidos);
         txtDireccion = findViewById(R.id.ciudad);
         txtDescripcion = findViewById(R.id.descripcion);
+
+
         txtTelefono = findViewById(R.id.telefono);
         btnGuardar = findViewById(R.id.btnguardar);
+        btnCancelar= findViewById(R.id.btnCancelar);
+
         database = FirebaseDatabase.getInstance().getReference("Contact");
 //        contactLab = new ContactLab(this);
     }
@@ -69,13 +75,14 @@ public class registro_user extends AppCompatActivity implements View.OnClickList
         if(btnGuardar == v){
             guardarBD();
             Toast.makeText(this, "Guardado", Toast.LENGTH_SHORT).show();
-            finish();
+            onBackPressed();
         }else{
             Toast.makeText(this, "ELSEEE", Toast.LENGTH_SHORT).show();
+            Intent intent = new Intent(this, MainActivity.class);
+            startActivity(intent);
+            onBackPressed();
         }
     }
-
-
 }
 
 
